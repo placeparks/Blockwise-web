@@ -45,10 +45,11 @@ export default function Simple() {
 
   const HomeButton = ({ children, href }) => {
     const path = window.location.pathname;
-    return path === "/SecondPage" || path === "/ForthPage" || path === "/ThirdPage" || path === "/FifthPage"  ? (
+    return path !== "/FirstPage" ? (
       <NavLink children={children} href={href} />
     ) : null;
   };
+  
 
   return (
     <>
@@ -70,9 +71,12 @@ export default function Simple() {
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {linksData.map(link => (
-                <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
-              ))}
+           {linksData.map(link => (
+  link.name === "Home"
+    ? <HomeButton key={link.name} href={link.href}>{link.name}</HomeButton>
+    : <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
+))}
+
               <Menu>
                 <MenuButton rounded={"md"} cursor={"pointer"}>
                   Services&#9660;
