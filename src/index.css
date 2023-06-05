@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
+code {
+  font-family: "Inter";
+}
+
+.card.no-hover:hover {
+  box-shadow: none;
+  transition: none;
+}
+@media (min-width: 992px) { /* Bootstrap's large screen breakpoint */
+  .my-card-body {
+    padding-left: 14%; /* Adjust as needed */
+  }
+  .my-title{
+    white-space: nowrap; /* Adjust as needed */
+  }
+
+}
+.dynamic-spacing {
+  letter-spacing: 0.545em;
+}
+
+@media screen and (max-width: 576px) {
+  .dynamic-spacing {
+    letter-spacing: normal;
+  }
+  .card-title.specific-card {
+    font-size: 40px;
+  }
+
+}
+
+.card-title.specific-card {
+  font-size: 77px;
+  font-weight: 700;
+}
+
+.custom-h1 {
+  font-size: 40px; /* Default font size for small screens */
+}
+.custom-card-body {
+  width: 65%;
+  text-align: justify;
+}
+
+.custom-specific{
+  margin-left: 20%;
+}
+.custom-button{
+  margin-left: -20%;
+}
+@media (min-width: 768px) { /* Medium screens and up */
+  .custom-h1 {
+    font-size: 80px;
+  }
+ 
+}
+
+@media screen and (max-width: 768px) { /* Medium screens and up */
+  .custom-specific{
+    margin-left: 0%;
+  }
+}
+
+
+
