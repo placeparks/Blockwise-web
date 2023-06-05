@@ -93,7 +93,7 @@ export default function ContactUs(){
                 <div>Years of Blockchain Experiencet</div>
             </div>
             <div className="col circle-text" style={{ display: 'flex', alignItems: 'center', marginBottom: '50px' }}>
-                <div className={styles.circle}>600+</div>
+                <div className={styles.circle}>100+</div>
                 <div>Team Members</div>
             </div>
             <div className="col circle-text"style={{ display: 'flex', alignItems: 'center', marginBottom: '0px'}}>
