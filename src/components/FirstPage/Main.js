@@ -28,13 +28,6 @@ export default function SplitScreen() {
         bgSize="cover"
         bgRepeat="no-repeat"
       >
-        <Box
-          pos="absolute"
-          top={0}
-          bottom={0}
-          left={0}
-          right={0}
-        />
         <Stack spacing={4} w={'full'} maxW={'lg'}>
           <Box marginTop={marginTop} style={{textAlign:"left", color:"white"}}>
             <Text fontSize={{ base: '1xl', md: '2xl', lg: '2xl' }} style={{fontWeight:"700"}}
