@@ -4,6 +4,7 @@ import FirstPage from './components/FirstPage';
 import SecondPage from './components/SecondPage';
 import ThirdPage from './components/ThirdPage';
 import ForthPage from './components/ForthPage';
+import FifthPage from './components/FifthPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MdFirstPage } from 'react-icons/md';
 
@@ -19,7 +20,7 @@ function App() {
           <Route exact path='/secondPage' element={<SecondPage/>}/>
           <Route exact path='/thirdPage' element={<ThirdPage/>}/>
           <Route exact path='/forthPage' element={<ForthPage/>}/>
-          <Route exact path='/fifthPage' element={""}/>
+          <Route exact path='/fifthPage' element={<FifthPage/>}/>
           <Route exact path='/sixthPage' element={""}/>
 
         </Routes>
