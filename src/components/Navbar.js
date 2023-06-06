@@ -1,8 +1,7 @@
+import { useState } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   Link,
   IconButton,
   Button,
@@ -10,23 +9,29 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
+  HStack,
   Stack
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-
 
 const linksData = [
   { name: "Home", href: "/FirstPage" },
   { name: "Web3.0", href: "/SecondPage" },
   { name: "Metaverse", href: "/ThirdPage" },
   { name: "Portfolio", href: "/ForthPage" },
-  ];
+];
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  const handleNavLinkClick = () => {
+    if (isMobileNavOpen) {
+      setIsMobileNavOpen(false);
+    }
+  };
 
   const NavLink = ({ children, href }) => (
     <Link
@@ -38,6 +43,7 @@ export default function Simple() {
         bg: useColorModeValue("gray.200", "gray.700"),
       }}
       href={href}
+      onClick={handleNavLinkClick}
     >
       {children}
     </Link>
@@ -45,12 +51,10 @@ export default function Simple() {
 
   const HomeButton = ({ children, href }) => {
     const path = window.location.pathname;
-    return path === "/SecondPage" || path === "/ForthPage" || path === "/ThirdPage" || path === "/FifthPage"  ? (
+    return path === "/SecondPage" || path === "/ForthPage" || path === "/ThirdPage" || path === "/FifthPage" ? (
       <NavLink children={children} href={href} />
     ) : null;
   };
-
-  
 
   return (
     <>
@@ -61,32 +65,27 @@ export default function Simple() {
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
+            onClick={() => {
+              setIsMobileNavOpen(!isMobileNavOpen);
+              isOpen ? onClose() : onOpen();
+            }}
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <img src='./logo.png' alt=""/>
+              <img src="./logo.png" alt="" />
             </Box>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
-           {linksData.map(link => (
-  link.name === "Home"
-    ? <HomeButton key={link.name} href={link.href}>{link.name}</HomeButton>
-    : <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
-))}
-
-              <Menu>
-                <MenuButton rounded={"md"} cursor={"pointer"}>
-                  Services&#9660;
-                </MenuButton>
-                <MenuList>
-                  <MenuItem as={Link} href="/fifthPage">UI/UX Designs</MenuItem>
-                  <MenuItem as={Link} href="/sixthPage">Game Development</MenuItem>
-                </MenuList>
-              </Menu>
+            <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+              {linksData.map((link) =>
+                link.name === "Home" ? (
+                  <HomeButton key={link.name} href={link.href}>
+                    {link.name}
+                  </HomeButton>
+                ) : (
+                  <NavLink key={link.name} href={link.href}>
+                    {link.name}
+                  </NavLink>
+                )
+              )}
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
@@ -97,38 +96,23 @@ export default function Simple() {
                 variant={"link"}
                 cursor={"pointer"}
                 minW={0}
-              >
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
+              ></MenuButton>
             </Menu>
           </Flex>
         </Flex>
 
-        {isOpen ? (
+        {isMobileNavOpen && (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {linksData.map(link => (
-                <NavLink key={link.name} href={link.href}>{link.name}</NavLink>
+              {linksData.map((link) => (
+                <NavLink key={link.name} href={link.href}>
+                  {link.name}
+                </NavLink>
               ))}
-              <Menu>
-              <MenuButton rounded={"md"} cursor={"pointer"}>
-                  Services&#9660;
-                </MenuButton>
-                <MenuList>
-                  <MenuItem as={Link} href="/fifthPage">UI/UX Designs</MenuItem>
-                  <MenuItem as={Link} href="/sixthPage">Game Development</MenuItem>
-                  </MenuList>
-              </Menu>
             </Stack>
           </Box>
-        ) : null}
+        )}
       </Box>
     </>
   );
 }
-
