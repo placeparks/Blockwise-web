@@ -21,6 +21,7 @@ const linksData = [
   { name: "Web3.0", href: "/SecondPage" },
   { name: "Metaverse", href: "/ThirdPage" },
   { name: "NFT", href: "/ForthPage" },
+    { name: "Defi", href: "/FifthPage" },
 ];
 
 export default function Simple() {
