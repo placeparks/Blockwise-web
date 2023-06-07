@@ -21,7 +21,12 @@ const linksData = [
   { name: "Web3.0", href: "/SecondPage" },
   { name: "Metaverse", href: "/ThirdPage" },
   { name: "NFT", href: "/ForthPage" },
-    { name: "Defi", href: "/FifthPage" },
+  { name: "Defi", href: "/FifthPage" },
+  { name: "Exchange", href: "/SixthPage" },
+  { name: "Wallet", href: "/SeventhPage" },
+  { name: "Blockchain", href: "/EighthPage" },
+  { name: "Coin Development", href: "/NinethPage" },
+  { name: "Blog", href: "/TenthPage" },
 ];
 
 export default function Simple() {
@@ -52,7 +57,7 @@ export default function Simple() {
 
   const HomeButton = ({ children, href }) => {
     const path = window.location.pathname;
-    return path === "/SecondPage" || path === "/ForthPage" || path === "/ThirdPage" || path === "/FifthPage" ? (
+    return path === "/SecondPage" || path === "/ForthPage" || path === "/ThirdPage" || path === "/FifthPage" || path === "/SixthPage" || path === "/SeventhPage" || path === "/EighthPage" || path === "/NinethPage" || path === "/TenthPage" ? (
       <NavLink children={children} href={href} />
     ) : null;
   };
