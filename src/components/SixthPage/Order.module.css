@@ -1,0 +1,23 @@
+.section1{
+    color: white;
+    background: #5350DF;
+    justify-content: center;
+    align-items: center;
+    padding:4%;
+    }
+
+.section2{
+    background: #E1E2E5;
+    padding: 4%;
+    padding-left: 5%;
+    }
+
+.section3{
+    background: #F3F3F3;
+    padding: 4%;
+}
+
+.section4{
+    background: #F3F3F3;
+    padding: 4%;
+}
