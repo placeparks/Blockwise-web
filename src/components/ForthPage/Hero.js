@@ -12,10 +12,10 @@ import {
   } from '@chakra-ui/react';
   
   export default function SplitScreen() {
-    const paddingRight = useBreakpointValue({ base: "0", md: "5%" });
+    const paddingRight = useBreakpointValue({ base: "0", md: "3%" });
     const marginTop = useBreakpointValue({ base: "5%", md: "-150px" });
     const imageHeight = useBreakpointValue({ base: "300px", md: "500px" });
-    const width= useColorModeValue({base:"300px", md:"600px"})
+    const width= useColorModeValue({base:"300px", md:"570px"})
     return (
       <Stack direction={{ base: 'column', md: 'row' }}>
         <Flex
