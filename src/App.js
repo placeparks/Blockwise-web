@@ -9,6 +9,7 @@ import SixthPage from './components/SixthPage';
 import SeventhPage from './components/SeventhPage';
 import EighthPage from './components/EighthPage';
 import NinethPage from './components/NinethPage';
+import TenthPage from './components/TenthPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MdFirstPage } from 'react-icons/md';
 
@@ -29,6 +30,7 @@ function App() {
           <Route exact path='/seventhPage' element={<SeventhPage/>}/>
           <Route exact path='/eighthPage' element={<EighthPage/>}/>
              <Route exact path='/ninethPage' element={<NinethPage/>}/>
+                <Route exact path='/tenthPage' element={<TenthPage/>}/>
         </Routes>
       </Router>
     </div>
