@@ -5,7 +5,7 @@ export default function UseCases(){
             <h1>Use Cases for Blockchain</h1>
             <p style={{paddingBottom:"3%"}}>These are just a few examples of the many use cases for blockchain technology. At our company, we are constantly exploring new ways to leverage blockchain to create innovative solutions for our clients.</p>
         
-            <div className="row row-cols-1 row-cols-md-4 g-4" style={{marginInline:"60px", minWidth:"18rem"}}>
+            <div className="row row-cols-1 row-cols-md-4 g-4">
   <div className="col">
        <div className="card h-100">
       <img src="/Blockchain/finance.jpg" style={{height:"200px"}} className="card-img-top" alt="..."/>
