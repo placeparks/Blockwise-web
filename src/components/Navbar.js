@@ -17,16 +17,16 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const linksData = [
-  { name: "Home", href: "/FirstPage" },
-  { name: "Web3.0", href: "/SecondPage" },
-  { name: "Metaverse", href: "/ThirdPage" },
-  { name: "NFT", href: "/ForthPage" },
-  { name: "Defi", href: "/FifthPage" },
-  { name: "Exchange", href: "/SixthPage" },
-  { name: "Wallet", href: "/SeventhPage" },
-  { name: "Blockchain", href: "/EighthPage" },
-  { name: "Coin Development", href: "/NinethPage" },
-  { name: "Blog", href: "/TenthPage" },
+  { name: "Home", href: "/Main" },
+  { name: "Web3", href: "/Web3" },
+  { name: "Metaverse", href: "/MetaversePage" },
+  { name: "NFT", href: "/NFT" },
+  { name: "Defi", href: "/DefiProtocol" },
+  { name: "Exchange", href: "/ExchangePage" },
+  { name: "Wallet", href: "/Wallets" },
+  { name: "Blockchain", href: "/Blockchains" },
+  { name: "Coin Development", href: "/CoinDevelopment" },
+  { name: "Blog", href: "/Blog" },
 ];
 
 export default function Simple() {
@@ -57,7 +57,7 @@ export default function Simple() {
 
   const HomeButton = ({ children, href }) => {
     const path = window.location.pathname;
-    return path === "/SecondPage" || path === "/ForthPage" || path === "/ThirdPage" || path === "/FifthPage" || path === "/SixthPage" || path === "/SeventhPage" || path === "/EighthPage" || path === "/NinethPage" || path === "/TenthPage" ? (
+    return path === "/Web3" || path === "/NFT" || path === "/MetaversePage" || path === "/DefiProtocol" || path === "/ExchangePage" || path === "/Wallets" || path === "/Blockchains" || path === "/CoinDevelopment" || path === "/Blog" ? (
       <NavLink children={children} href={href} />
     ) : null;
   };
