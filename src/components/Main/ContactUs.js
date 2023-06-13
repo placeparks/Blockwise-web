@@ -70,7 +70,7 @@ export default function ContactUs(){
                         <input type="text" className="form-control" id="number" value={number} onChange={(e) => setNumber(e.target.value)}/>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Additional Comments</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" name='message' rows="3" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                     </div>
                     <div className="col-12">
