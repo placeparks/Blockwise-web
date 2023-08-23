@@ -69,7 +69,7 @@ export default function LargeWithAppLinksAndSocial() {
           <Stack align={"flex-start"} style={{textAlign:"left"}}>
           <div id='contact'>
           <ListHeader>CONTACT</ListHeader>
-            <Link href={"mailto:support@blockwisetech.com"}>&#x1F4E7; support@blockwisetech.com</Link>
+            <Link href={"mailto:support@blockwisetech.com"}>&#x1F4E7; support@blockwisetech.com</Link> <br/>
             <Link href={"#"}><iconify-icon icon="simple-line-icons:location-pin"></iconify-icon> 50-N, Gurumangat Road Gulberg, Lahore</Link>
             <Link href={"#"}> &#x2706; +92 321-6787388</Link>
             <Text>HR Contact:</Text>
