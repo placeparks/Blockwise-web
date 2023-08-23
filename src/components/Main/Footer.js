@@ -67,10 +67,15 @@ export default function LargeWithAppLinksAndSocial() {
           </Stack>
 
           <Stack align={"flex-start"} style={{textAlign:"left"}}>
-            <ListHeader>CONTACT</ListHeader>
-            <Link href={"#"}>&#x1F4E7; support@blockwisetech.com</Link>
+          <div id='contact'>
+          <ListHeader>CONTACT</ListHeader>
+            <Link href={"mailto:support@blockwisetech.com"}>&#x1F4E7; support@blockwisetech.com</Link>
             <Link href={"#"}><iconify-icon icon="simple-line-icons:location-pin"></iconify-icon> 50-N, Gurumangat Road Gulberg, Lahore</Link>
             <Link href={"#"}> &#x2706; +92 321-6787388</Link>
+            <Text>HR Contact:</Text>
+            <Link href={"mailto:hr@blockwisetech.com"}>&#x1F4E7; hr@blockwisetech.com</Link>
+            <Link href={"#"}> &#x2706; +92 308 4062226</Link>
+            </div>
           </Stack>
 
           <Stack align={"flex-start"} style={{textAlign:"left"}}>

@@ -32,7 +32,7 @@ import {
         
               <Heading fontSize={{ base: '4xl', md: '4xl', lg: '4xl' }}>
                 <Text mt={{md:"50%", sm:"5%"}}>
-                Web 3.0 Development Service
+                Web 3.0 Mobile App Services
                 </Text>
               </Heading>
               <Text fontSize={{ base: 'md', lg: 'lg' }}>

@@ -18,7 +18,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const linksData = [
   { name: "Home", href: "/Main" },
-  { name: "Web3", href: "/Web3" },
+  { name: "Web3 Mobile App", href: "/Web3" },
   { name: "Metaverse", href: "/MetaversePage" },
   { name: "NFT", href: "/NFT" },
   { name: "Defi", href: "/DefiProtocol" },
@@ -27,6 +27,7 @@ const linksData = [
   { name: "Blockchain", href: "/Blockchains" },
   { name: "Coin Development", href: "/CoinDevelopment" },
   { name: "Blog", href: "/Blog" },
+  {name: "Contact", href: "#contact"}
 ];
 
 export default function Simple() {
@@ -49,15 +50,25 @@ export default function Simple() {
         bg: useColorModeValue("gray.200", "gray.700"),
       }}
       href={href}
-      onClick={handleNavLinkClick}
+      onClick={(e) => {
+        if (href === "#contact") {
+          e.preventDefault();
+          const contactSection = document.getElementById("contact");
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+        handleNavLinkClick();
+      }}
     >
       {children}
     </Link>
   );
+  
 
   const HomeButton = ({ children, href }) => {
     const path = window.location.pathname;
-    return path === "/Web3" || path === "/NFT" || path === "/MetaversePage" || path === "/DefiProtocol" || path === "/ExchangePage" || path === "/Wallets" || path === "/Blockchains" || path === "/CoinDevelopment" || path === "/Blog" ? (
+    return path === "/Web3" || path === "/NFT" || path === "/MetaversePage" || path === "/DefiProtocol" || path === "/ExchangePage" || path === "/Wallets" || path === "/Blockchains" || path === "/CoinDevelopment" || path === "/Blog" || path === "#contact" ? (
       <NavLink children={children} href={href} />
     ) : null;
   };

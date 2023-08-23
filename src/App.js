@@ -10,8 +10,8 @@ import Wallets from './components/Wallets';
 import Blockchains from './components/Bloackchains';
 import CoinDevelopment from './components/CoinDevelopment';
 import Blog from './components/Blog';
+import Footer from './components/Main/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { MdFirstPage } from 'react-icons/md';
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           <Route exact path='/blockchains' element={<Blockchains/>}/>
           <Route exact path='/coinDevelopment' element={<CoinDevelopment/>}/>
           <Route exact path='/blog' element={<Blog/>}/>
+          <Route path="#contact" element={<Footer/>} />
         </Routes>
       </Router>
     </div>
