@@ -6,7 +6,6 @@ import Solutions from './Solutions';
 import Benefits from './Benefits';
 import FAQ from './FAQ';
 import ContactUs from './ContactUs';
-import Footer from './Footer';
 
 
 
@@ -50,7 +49,6 @@ export default function Hero(){
 <ContactUs/>
 </div>
 
-  <Footer/>
 </>
 
     )

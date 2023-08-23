@@ -10,7 +10,7 @@ import Wallets from './components/Wallets';
 import Blockchains from './components/Bloackchains';
 import CoinDevelopment from './components/CoinDevelopment';
 import Blog from './components/Blog';
-import Footer from './components/Main/Footer';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
           <Route exact path='/blog' element={<Blog/>}/>
           <Route path="#contact" element={<Footer/>} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
