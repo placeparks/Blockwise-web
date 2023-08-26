@@ -51,7 +51,7 @@ export default function ContactUs(){
                             <input type="text" className="form-control" id="user_name" placeholder="" name='from_name' value={name} onChange={(e) => setName(e.target.value)}/>
                         </div>
                         <label for="inputEmail4" className="form-label">Email</label>
-                        <input type="email" className="form-control" id="inputEmail4" name='from_email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" className="form-control" id="inputEmail4" name='user_email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
                     <div className="col-md-6">
                         <label for="inputCity" className="form-label">City</label>
