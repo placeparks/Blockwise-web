@@ -67,7 +67,7 @@ export default function ContactUs(){
                     </div>
                     <div className="col-12">
                         <label htmlFor="number" className="form-label">Phone Number</label>
-                        <input type="text" className="form-control" id="number" value={number} onChange={(e) => setNumber(e.target.value)}/>
+                        <input type="text" className="form-control" id="number" name='user_number' value={number} onChange={(e) => setNumber(e.target.value)}/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Additional Comments</label>
